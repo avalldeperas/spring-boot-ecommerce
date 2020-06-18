@@ -1,15 +1,15 @@
-# Spring Boot ecommerce Project
+# Spring Boot eCommerce Project
 
 ### Full Stack application with Angular 9 and Spring Boot 2.
 
-This project builds a Real-time Full Stack eCommerce application with Angular 9 and Spring Boot 2 using modern
+This project builds a Real-time Full Stack eCommerce application with Angular 9 and Spring Boot 2, using modern
  development tools such as [Intellij IDEA](https://www.jetbrains.com/idea/) and [Webstorm](https://www.jetbrains.com/webstorm/) IDE, based on Maven and npm dependency management.  
  
  
  ### Used Technologies
 The used technologies for this project are the following:
 
-* [Spring Boot 2.3.1](https://start.spring.io/) using Java 11 for Back-End.
+* [Spring Boot 2.3.1](https://start.spring.io/) using Java 14 for Back-End.
 * [Angular 9](https://angular.io/) for Front-End.
 * Maven dependencies such as: 
     * [Project Lombok](https://projectlombok.org/): avoids boilerplate code.
@@ -23,5 +23,6 @@ The used technologies for this project are the following:
 - [ ] Add products to shopping cart (CRUD)
 - [ ] Shopping cart checkout
 - [ ] User login/logout security
+- [ ] Track previous orders for logged users
 
 
