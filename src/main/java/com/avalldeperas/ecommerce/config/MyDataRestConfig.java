@@ -10,7 +10,6 @@ import org.springframework.http.HttpMethod;
 
 import javax.persistence.EntityManager;
 import javax.persistence.metamodel.EntityType;
-import javax.persistence.metamodel.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -49,9 +48,9 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         Set<EntityType<?>> entities = entityManager.getMetamodel().getEntities();
         List<Class> entityClasses = new ArrayList<>();
 
-        entities.stream()
-                .map(Type::getJavaType)
-                .map(entityClasses::add);
+        for(EntityType entity: entities) {
+            entityClasses.add(entity.getJavaType());
+        }
 
         Class[] domainTypes = entityClasses.toArray(new Class[0]);
         config.exposeIdsFor(domainTypes);
