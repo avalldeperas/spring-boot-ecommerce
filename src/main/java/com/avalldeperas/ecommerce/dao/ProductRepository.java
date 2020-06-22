@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @CrossOrigin("http://localhost:4200")
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-    // Spring will automatically execute a Query for us using 'findBy*'.
-    // Page is a sublist of an Object List
+    // Spring will automatically execute a Query for us when using 'findBy*'. Page == sublist of an Object List
     Page<Product> findByCategoryId(@RequestParam("id") Long id, Pageable pageable);
+    Page<Product> findByNameContaining(@RequestParam("name") String name, Pageable pageable);
 
 }
